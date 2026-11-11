@@ -1,0 +1,24 @@
+/* Rangoli: drawings, gallery, steps */
+.rg{display:block;width:100%;height:auto;border-radius:12px}
+.outline .rg .bg{fill:#fff;stroke:#bbb;stroke-width:.6}
+.outline .rg .s{fill:none;stroke:#111;stroke-width:1}
+.outline .rg .dt{fill:#111;stroke:none}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(46%,170px),1fr));list-style:none;padding:0;margin:14px 0}
+.gal a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;text-decoration:none;color:var(--ink);font-weight:700;line-height:1.25}
+.gal a:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.gal a span{display:block;padding:8px 4px 2px}.gal a small{display:block;color:var(--soft);font-weight:400;font-size:.84rem}
+.fig{max-width:520px;margin:14px auto}
+.fig.strip{max-width:none}
+.bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.bar .chips{margin:0}
+.steps{list-style:none;padding:0;margin:14px 0;counter-reset:st}
+.steps li{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);counter-increment:st}
+.steps li p{margin:0}.steps li p::before{content:"Step " counter(st);display:block;font:700 .82rem var(--font-head);color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+@media (min-width:700px){.steps li{grid-template-columns:170px 1fr}}
+.sw{display:inline-flex;align-items:center;gap:6px;margin:0 10px 4px 0;font-weight:600}
+.sw i{width:16px;height:16px;border-radius:50%;border:1px solid var(--field-line);display:inline-block}
+.grid a span{display:block}.grid a span small{display:block;white-space:normal;margin-top:2px}
+.two{display:grid;gap:18px;grid-template-columns:1fr}
+@media (min-width:860px){.two{grid-template-columns:minmax(0,520px) 1fr;align-items:start}.two .fig{margin:0}}
+table th{position:static}
+@media print{.bar,.chips,.gal,.more{display:none!important}.rg .bg{fill:#fff!important}.fig{max-width:60%}.steps li{break-inside:avoid}}
