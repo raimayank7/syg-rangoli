@@ -1,0 +1,24 @@
+
+.grid a{flex-wrap:wrap}.grid a small{white-space:normal}.grid li{min-width:0}
+[lang=hi]{font-family:'Noto Sans Devanagari','Nirmala UI','Mangal',var(--font)}
+.pics{list-style:none;padding:0;margin:14px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(46%,170px),1fr))}
+.pics a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:8px;text-decoration:none;color:var(--ink);text-align:center}
+.pics a:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.pics img{display:block;width:100%;height:auto;aspect-ratio:1;background:#fff;border-radius:8px}
+.pics b{display:block;margin-top:6px;font-size:.98rem}.pics small{color:var(--soft);font-size:.8rem}
+.sheet{background:#fff;color:#000;border:1px solid var(--line);border-radius:var(--r);padding:10px;max-width:min(640px,78vh);margin:12px auto}
+.sheet .top{display:flex;justify-content:space-between;gap:10px;font-size:.85rem;color:#333;padding:2px 6px}
+.sheet svg{display:block;width:100%;height:auto;touch-action:manipulation}
+.sheet .bot{text-align:right;font-size:.7rem;color:#666;padding:0 6px}
+.sheet svg .f{fill:#fff;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}.sheet svg .l{fill:none;stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.sheet svg .d{fill:#000;stroke:none}
+.sheet svg .f{cursor:pointer}
+.pal{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px auto;max-width:640px}
+.pal button{width:40px;height:40px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0}
+.pal button[aria-pressed=true]{outline:3px solid var(--focus);outline-offset:2px}
+.tb{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.lv{display:inline-block;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--soft)}
+.cn{list-style:none;padding:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.cn li{display:flex;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.cn i{width:34px;height:34px;border-radius:50%;border:1px solid #888;flex:none}.cn b{font-size:1.2rem}
+@media print{.hd,.ft,.crumbs,.noprint,.sponsor-slot,.boot{display:none!important}body{background:#fff}main>*:not(.printme){display:none}main>.printme{display:block}
+ .sheet{border:0;max-width:none;margin:0;padding:0}.sheet .top{font-size:12pt;padding:0 0 4mm}.sheet svg{max-height:235mm}body.blank .sheet svg .f{fill:#fff!important}@page{size:A4 portrait;margin:12mm}}
